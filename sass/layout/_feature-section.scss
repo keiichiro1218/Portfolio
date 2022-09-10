@@ -1,0 +1,7 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.l-feature-section {
+    background-color: var.$background-color-gray;
+    height: auto;
+}

@@ -1,0 +1,22 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.l-header {
+    height: 72px;
+    display: flex;
+    align-items: center;
+
+    @include mixin.mq('sp') {
+		height: 52px;
+	}
+    
+}
+
+.l-inner {
+    margin: 0 8%;
+
+    @include mixin.mq('sp') {
+		margin: 0 5%;
+	}
+
+}

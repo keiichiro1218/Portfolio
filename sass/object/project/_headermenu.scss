@@ -1,0 +1,24 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-headermenu {
+    margin-left: auto;
+    display: flex;
+
+    @include mixin.mq('sp') {
+		display: none;
+	}
+}
+
+.p-headermenu__list {
+    display: flex;
+    list-style: none;
+}
+
+.p-headermenu__item {
+    font-weight: 700;
+
+    &:nth-child( n+2 ) {
+        margin-left: 16px;
+    }
+}

@@ -1,0 +1,62 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-about {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include mixin.mq('sp') {
+		padding-top: 80px;
+        padding-bottom: 60px;
+	}
+
+}
+
+.p-about__title {
+    
+    margin-bottom: 30px;
+    font-size: 48px;
+    letter-spacing: 5%;
+    text-align: center;
+
+    br {
+        display: none;
+
+        @include mixin.mq('sp') {
+            display: block;
+        }
+    }
+
+    @include mixin.mq('sp') {
+		font-size: 30px;
+	}
+
+    &::before {
+        content: "What is Ravek?";
+        color: var.$subtitlecolor;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        display: block;
+
+        @include mixin.mq('sp') {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+    
+    }
+}
+
+.p-about__text {
+    margin-bottom: 30px;
+
+    span {
+        font-weight: 700;
+    }
+    
+}
+
+.p-about__btn {
+    margin-top: 40px;
+}

@@ -1,0 +1,60 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-flow {
+    padding: 100px 0 80px 0;
+    background-color: var.$background-color-gray;
+
+    @include mixin.mq('sp') {
+        padding: 60px 0;
+    }
+
+}
+
+.p-flow__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    letter-spacing: 5%;
+    text-align: center;
+    font-weight: 700;
+
+    @include mixin.mq('sp') {
+        font-size: 30px;
+    }
+
+    &::before {
+        content: "Flow";
+        color: var.$subtitlecolor;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        display: block;
+
+        @include mixin.mq('sp') {
+            font-size: 22px;
+        }
+    
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.p-flow__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mixin.mq('sp') {
+        display: block;
+    }
+
+    
+}
+
+.p-flow__triangle {
+    align-items: center;
+    
+}
+

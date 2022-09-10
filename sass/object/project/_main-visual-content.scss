@@ -1,0 +1,88 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-main-visual-content {
+   width: 57%;
+
+   @include mixin.mq('sp') {
+    width: 100%;
+}
+
+}
+
+.p-main-visual-content__title {
+    font-size: 60px;
+    line-height: 86px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-family: "Noto Sans JP";
+
+    @include mixin.mq('sp') {
+		font-size: 30px;
+        line-height: 48px;
+	}
+    
+
+}
+
+.p-main-visual-content__lead {
+    margin-bottom: 33px;
+
+    br {
+        @include mixin.mq('sp') {
+            display: none;
+        }
+    }
+
+}
+
+.p-main-visual-content__button {
+    display: flex;    
+    position: absolute;
+    bottom: 60px;
+
+    @include mixin.mq('sp') {
+        position: initial;
+        display: block;
+        text-align: center;
+        
+	}
+    
+
+    a {
+        @include mixin.mq('sp') {
+            width: 85%;
+
+            &:first-child {
+                margin-bottom: 23px;
+            }
+        }
+    }
+
+}
+
+.p-main-visual-content__img {
+    margin-left: 1%;
+    width: 43%;
+    height: auto;
+
+    @include mixin.mq('sp') {
+		width: 87%;
+        // margin-left: 0;
+        // width: 100%;
+        margin: 0 auto;
+        margin-top: -50px;
+	}
+
+    img {
+        width: 100%;
+
+    }
+}
+
+.p-main {
+    position: relative;
+}
+
+
+
