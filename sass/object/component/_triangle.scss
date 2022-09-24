@@ -18,7 +18,7 @@
             top: 50%;
             left: 125%;
 
-            @include mixin.mq('sp') {
+            @include mixin.mq('tab-middle') {
               display: none;
           }
         }    

@@ -4,9 +4,8 @@
 .l-placement {
     display: flex;
     align-items: center;
-    // height: 580px;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
 		display: block;
 	}
 }

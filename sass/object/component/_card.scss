@@ -5,7 +5,7 @@
     width: 24%;
     position: relative;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab-middle') {
         width: 100%;
         margin-bottom: 84px;
     }
@@ -20,7 +20,7 @@
         left: -10%;
         z-index: 10;
 
-        @include mixin.mq('sp') {
+        @include mixin.mq('tab-middle') {
             font-size: 48px;
             left: 0;
         }
@@ -31,7 +31,7 @@
     width: 24%;
     position: relative;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab-middle') {
         width: 100%;
         margin-bottom: 90px;
     }
@@ -46,7 +46,7 @@
         left: -10%;
         z-index: 10;
 
-        @include mixin.mq('sp') {
+        @include mixin.mq('tab-middle') {
             font-size: 48px;
             left: 0;
         }
@@ -57,20 +57,19 @@
     width: 24%;
     position: relative;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab-middle') {
         width: 100%;
     }
 
     &::before {
         content: "03";
         position: absolute;
-        // top: ;
         font-weight: 700;
         font-size: 48px;
         top: -10%;
         left: -10%;
 
-        @include mixin.mq('sp') {
+        @include mixin.mq('tab-middle') {
             font-size: 48px;
             left: 0;
         }

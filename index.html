@@ -5,23 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/73db00d111.js" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css?ver">
     <title>Document</title>
 </head>
 <body>
-    <header class="l-header l-inner">
+    <header class="l-header ">
         <h1 class="p-title">Ravek</h1>
-        <div class="p-headermenu">
-            <ul class="p-headermenu__list">
-                <li class="p-headermenu__item">特徴</li>
-                <li class="p-headermenu__item">導入実績</li>
-                <li class="p-headermenu__item">導入までの流れ</li>
-                <li class="p-headermenu__item">料金プラン</li>
-                <li class="p-headermenu__item">よくある質問</li>
-            </ul>  
+        <div class="p-hamburgerbtn">
+            <div class="openbtn4">
+                <span></span> 
+                <span></span> 
+                <span></span> 
+            </div>
+            <div class="p-headermenu">
+                <ul class="p-headermenu__list">
+                    <li class="p-headermenu__item"><a href="">特徴</a></li>
+                    <li class="p-headermenu__item"><a href="">導入実績</a></li>
+                    <li class="p-headermenu__item"><a href="">導入までの流れ</a></li>
+                    <li class="p-headermenu__item"><a href="">料金プラン</a></li>
+                    <li class="p-headermenu__item"><a href="">よくある質問</a></li>
+                    <a class="c-about-btn p-hamburgermenu__btn" href="">無料でRavekを使ってみる</a>
+                    <a class="c-button__sub p-hamburgermenu__btn" href="">資料をダウンロードする</a>
+                    <a class="c-button p-hamburgermenu__btn-none" href="">無料で使ってみる</a>
+                    
+                </ul>  
+            </div>
         </div>
-        <div class="u-button-margin"><a class="c-button" href="">無料で使ってみる</a></div>
     </header>
+    <div class="l-contents">
     <section class="l-main-visual">
         <div class="l-inner p-main">
             <div class="l-placement">
@@ -36,14 +51,14 @@
                         <br>
                         簡単かつ高速にし、生産性を向上させるツールです。
                     </div>
+                    <div class="p-main-visual-content__button">
+                        <a class="c-button" href="">まずは無料で使ってみる</a>
+                        <a class="c-button__sub" href="">資料をダウンロードする</a>
+                    </div>
                 </div>
                 <div class="p-main-visual-content__img">
                     <img src="./assets/At work-amico 1.svg" alt="">
                 </div>
-            </div>
-            <div class="p-main-visual-content__button">
-                <a class="c-button" href="">まずは無料で使ってみる</a>
-                <a class="c-button__sub" href="">資料をダウンロードする</a>
             </div>
         </div>
     </section>
@@ -80,15 +95,12 @@
                         <img src="./assets/Dashboard-amico (1) 1.svg" alt="">
                     </div>
                 </div>
-                
                 <div class="p-feature__main p-feature__rowreverse ">
                     <div class="p-feature__content02">
                         <div class="p-feature__text">
                             <p class="p-feature__caption">タスクの入力がシンプルかつ簡単。</br>入力の手間が最小限に</p>
                             <p class="p-feature__caption-text">タスク管理ツールで面倒になりがちなタスクの入力作業。<br>
                                 RavekはPC・スマートフォンのどちらでもシンプルかつ簡単に入力でき、手間が最小限に抑えられます。本質的な業務に時間を割きましょう。</p>
-                            <!-- <p>タスク管理ツールで面倒になりがちなタスクの入力作業。</p>
-                            <p>RavekはSlackと連携することで、Slack上でRavekをタスクを追加したり、確認したりできます。都度の切り替えの手間がなくなり、シームレスに扱えるのが特長です。Slackを導入しているなら違和感なく使用できます。</p> -->
                         </div>
                     </div>
                     <div class="p-feature__img02">
@@ -131,7 +143,7 @@
         </div>
     </section>
     <section class="p-flow">
-        <div class="l-inner">
+        <div class="l-inner p-flow__inner">
             <div class="p-flow__title">導入までの流れ</div>
             <div class="p-flow__content">
                 <div class="c-card01">
@@ -177,8 +189,6 @@
         <div class="l-inner">
             <div class="p-price__title">料金プラン</div>
             <div class="table">
-
-            
             <table class="p-table">
                <tr class="p-table__head">
                     <th class="p-table__space"></th>
@@ -204,7 +214,6 @@
                         </div>
                     </th>
                 </tr>
-
                <tr class="p-table__tr p-table__bg-color">
                     <th class="p-table__td">プロジェクト数</th>
                     <td class="p-table__td">5</td>
@@ -254,7 +263,7 @@
                     <td ><a class="c-button__white p-table__button-table" href="">無料で使ってみる</a></td>
               </tr>
             </table>
-        </div>
+            </div>
         </div>
     </section>
     <section class="p-question">
@@ -348,5 +357,6 @@
             </div>
         </div>
     </footer>
+</div>
 </body>
 </html>

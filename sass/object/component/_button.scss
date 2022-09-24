@@ -6,6 +6,13 @@
        display: inline-block;
        font-weight: 700;
        border-radius: 25px;
+       font-size: 18px;
+
+       @include mixin.mq('tab') {
+		font-size: 15px;
+              width: 85%;
+
+	}
 
 }
 
@@ -15,10 +22,18 @@
        border: 2px solid var.$primary;
        font-weight: 700;
        margin-left: 37px;
-       border-radius: 25px;
+       font-size: 18px;
 
-       @include mixin.mq('sp') {
-		margin-left: 0;
+       // @include mixin.mq('tab') {
+	// 	margin-left: 0;
+	// }
+
+       @include mixin.mq('tab') {
+		margin-left: 15px;
+              font-size: 15px;
+              margin-left: 0;
+              width: 85%;
+
 	}
 
 }

@@ -1,0 +1,39 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-hamburgermenu__btn {
+    margin: 0 auto;
+
+
+    @include mixin.mq('tab') {
+        // width: 100%;
+        width: 300px;
+        text-align: center;
+        // margin-left: 0;
+        // margin: 0 auto;
+        padding: 20px 35px;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 24px;
+		
+	}
+
+    @include mixin.mq('tab-only') {
+		margin-left: 10%;
+
+	}
+
+    @include mixin.mq('pc') {
+		display: none;
+
+	}
+}
+
+
+.p-hamburgermenu__btn-none {
+
+    @include mixin.mq('tab') {
+		display: none;
+
+	}
+}

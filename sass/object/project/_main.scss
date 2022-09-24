@@ -1,0 +1,12 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-main {
+    position: relative;
+
+    @include mixin.mq('tab-middle') {
+		margin: 0 25%;
+
+	}
+
+}

@@ -8,6 +8,10 @@
    # Global selectors
    # ================================================================= */
 
+   body.active {
+    position: fixed;
+  }
+  
    html {
     box-sizing: border-box;
     overflow-y: scroll; /* All browsers without overlaying scrollbars */
@@ -19,6 +23,7 @@
   ::after {
     background-repeat: no-repeat; /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
     box-sizing: inherit;
+
   }
   
   ::before,

@@ -4,9 +4,22 @@
 .p-feature {
     padding: 100px 0;
     
-    @include mixin.mq('sp') {
-        margin: 0;
+    @include mixin.mq('tab-middle') {
+        margin: 0  25%;
+
     }
+
+    @include mixin.mq('tab-split-max') {
+        margin: 0 10%;
+        padding: 60px 0;
+
+    }
+
+
+    @include mixin.mq('sp') {
+		margin: 0;
+
+	}
 }
 
 .p-feature__main {
@@ -23,7 +36,7 @@
     text-align: center;
     font-weight: 700;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
 		font-size: 30px;
 	}
     
@@ -35,8 +48,9 @@
         text-align: center;
         display: block;
 
-        @include mixin.mq('sp') {
-            font-size: 22px;margin-bottom: 12px;
+        @include mixin.mq('tab') {
+            font-size: 22px;
+            margin-bottom: 12px;
 
         }
     
@@ -48,7 +62,7 @@
 .p-feature__main01 {
     margin-bottom: 100px;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         flex-direction: column-reverse;
         margin-bottom: 60px;
     }
@@ -61,8 +75,15 @@
     height: 366px;
     width: 65%;
     position: relative;
+    margin-top: 100px;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
+		height: 256px;
+        padding: 0;
+
+	}
+
+    @include mixin.mq('tab') {
         padding: 0;
         width: 100%;
         height: 293px;
@@ -79,9 +100,9 @@
         left: 3%;
         margin-right: 15px;
 
-        @include mixin.mq('sp') {
+        @include mixin.mq('tab') {
             font-size: 42px;
-            top: 49px;
+            top: 39px;
             left: 20px;
             height: 53px;
             
@@ -94,10 +115,17 @@
     margin-left: -7%;
     z-index: 5;
 
-    @include mixin.mq('sp') {
-        width: 100%;
+    // @include mixin.mq('tab-split-max') {
+    //     width: 75%;
+    //     width: 100%;
+    //     margin-left: 0;
+    // }
+
+    @include mixin.mq('tab') {
+		width: 100%;
         margin-left: 0;
-    }
+
+	}
 
     img {
         height: auto;
@@ -116,12 +144,12 @@
     margin-left: -5%;
     position: relative;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         padding: 0;
         width: 100%;
         // height: 293px;
         padding: 100px 20px 40px;
-        margin-top: -110px;
+        margin-top: -90px;
         margin-left: 0;
     }
     
@@ -134,9 +162,9 @@
         left: 3%;
         margin-right: 15px;
 
-        @include mixin.mq('sp') {
+        @include mixin.mq('tab') {
             font-size: 42px;
-            top: 49px;
+            top: 39px;
             left: 20px;
             height: 53px;
             
@@ -149,7 +177,7 @@
     margin-top: 25px;
     z-index: 5;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         width: 100%;
     }
 
@@ -164,10 +192,10 @@
     margin-top: -10%;
     margin-bottom: 100px;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         flex-direction: column-reverse;
-        margin-bottom: 60px;
         margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -175,13 +203,13 @@
     padding: 65px 124px 65px 148px;
     background-color: var.$white;
     border-radius: 30px;
-    height: 366px;
+    // height: 366px;
     width: 65%;
     margin-top: auto;
     position: relative;
 
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         padding: 0;
         width: 100%;
         padding: 100px 20px 40px;
@@ -198,9 +226,9 @@
         left: 3%;
         margin-right: 15px;
 
-        @include mixin.mq('sp') {
+        @include mixin.mq('tab') {
             font-size: 42px;
-            top: 49px;
+            top: 39px;
             left: 20px;
             height: 53px;
         }
@@ -213,7 +241,7 @@
     margin-bottom: 0.7%;
     z-index: 5;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         width: 100%;
         margin-left: 0;
         margin-bottom: 0;
@@ -233,7 +261,7 @@
     line-height: 52px;
     white-space: nowrap;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         font-size: 22px;
         line-height: 31px;
         margin-bottom: 8px;
@@ -242,12 +270,12 @@
 
 .p-feature__caption-text {
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         font-size: 14px;
     }
 
     br {
-        @include mixin.mq('sp') {
+        @include mixin.mq('tab') {
             display: none;
             
         }
@@ -257,7 +285,7 @@
 .p-feature__rowreverse {
     flex-direction: row-reverse;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab') {
         flex-direction: column-reverse;
         margin-bottom: 60px;
     }

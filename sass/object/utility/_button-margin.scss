@@ -7,4 +7,9 @@
     @include mixin.mq('sp') {
 		display: none;
 	}
+
+    @include mixin.mq('tab-split-max') {
+        display: none;
+    }
 }
+

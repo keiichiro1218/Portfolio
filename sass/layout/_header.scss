@@ -1,22 +1,33 @@
 @use "./global/variables" as var;
 @use "./global/mixin" as mixin;
 
+
+
 .l-header {
     height: 72px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+   
+    @include mixin.mq('tab') {
+        height: 52px;
+        position: fixed;
+        z-index: 110;
+        background-color: var.$white;
 
-    @include mixin.mq('sp') {
-		height: 52px;
-	}
+    }
     
 }
+
+
 
 .l-inner {
     margin: 0 8%;
 
-    @include mixin.mq('sp') {
+    @include mixin.mq('tab-split-max') {
 		margin: 0 5%;
 	}
 
 }
+
