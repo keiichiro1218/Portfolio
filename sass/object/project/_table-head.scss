@@ -11,19 +11,8 @@
     }
 }
 
-.p-table__head {
-    
-    
-    // th {
-    //     width: 18%;
-        
- 
-    // }
-}
-
 .p-table__space {
     width: 10%;
-
 
     @include mixin.mq('tab-middle') {
         width: 200px;
@@ -31,7 +20,7 @@
 }
 
 .p-table__head-left {
-    background-color: var.$background-color;
+    background-color: var.$background-black;
     color: var.$white;
     padding: 47px 13px 41px 13px;
     vertical-align: bottom;
@@ -83,7 +72,7 @@
 }
 
 .p-table__head-right {
-    background-color: var.$background-color;
+    background-color: var.$background-black;
     color: var.$white;
     padding: 47px 13px 41px 13px;
     vertical-align: bottom;
@@ -132,7 +121,7 @@
 }
 
 .p-table__bg-color {
-    background-color: var.$main-visual;
+    background-color: var.$background-blue;
 }
 
 .p-table__basic {

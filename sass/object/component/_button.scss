@@ -33,10 +33,10 @@
 }
 
 .c-button__white {
-       @include mixin.primarybtn($btn-padding: 12px 26px, $btn-background:var.$white, $btn-color:var.$background-color);
+       @include mixin.primarybtn($btn-padding: 12px 26px, $btn-background:var.$white, $btn-color:var.$background-black);
        
        display: inline-block;
-       border: 2px solid var.$background-color;
+       border: 2px solid var.$background-black;
        font-weight: 700;
        border-radius: 25px;
 }

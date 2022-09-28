@@ -38,7 +38,6 @@
     &::before {
         content: "02";
         position: absolute;
-        // top: ;
         font-weight: 700;
         font-size: 48px;
         top: -10%;
@@ -76,7 +75,7 @@
 }
 
 .c-card__img {
-    background-color: var.$main-visual;
+    background-color: var.$background-blue;
     padding: 21px 60px;
     border-radius: 30px;
 

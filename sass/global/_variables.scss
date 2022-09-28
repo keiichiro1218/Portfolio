@@ -1,12 +1,16 @@
 $primary : #64629D;
-$fontcolor : #2D2D32;
-$background-color : #2D2D32;
-$subtitlecolor : #9F9EC1;
-$white : #FFFFFF;
-$main-visual : #EDECFC;
-$background-color-gray : #F9F9F9;
-$background-color-footer : #000000;
+$font-color-black : #2D2D32;
+// $background-color : #2D2D32;
+$background-black : #2D2D32;
+// $background-color-gray : #F9F9F9;
+$background-gray : #F9F9F9;
+// $main-visual : #EDECFC;
+$background-blue : #EDECFC;
 $triangle-gray: #C4C4C4;
+// $background-color-footer : #000000;
+$background-footer : #000000;
+$white : #FFFFFF;
+$subtitlecolor : #9F9EC1;
 
 $breakpoints: (
 	"sp": "screen and (max-width: 390px)",

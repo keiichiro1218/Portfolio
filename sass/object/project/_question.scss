@@ -3,7 +3,7 @@
 
 .p-question {
     padding: 100px 0;
-    background-color: var.$background-color-gray;
+    background-color: var.$background-gray;
 
     @include mixin.mq('tab') {
 		padding: 60px 0;
@@ -95,10 +95,8 @@
         left: 15px;
         padding: 0;
 
-
     }
 
-    
 }
 
 .p-question__answer {
@@ -106,7 +104,6 @@
     background-color: var.$white ;
     border-radius: 10px;
     align-items: center;
-    // height: 108px;
     padding-left: 56px;
     padding-right: 25px;
     width: 100%;

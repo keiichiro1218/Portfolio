@@ -15,6 +15,7 @@ html {
   box-sizing: border-box;
   overflow-y: scroll; /* All browsers without overlaying scrollbars */
   -webkit-text-size-adjust: 100%; /* iOS 8+ */
+  font-family: "Noto Sans JP";
 }
 
 *,
@@ -1061,7 +1062,7 @@ video {
 }
 
 .div {
-  background-color: white;
+  background-color: #FFFFFF;
   height: 24px;
   width: 24px;
   border-radius: 50%;
@@ -1074,7 +1075,7 @@ video {
   font-family: "Font Awesome 6 Brands";
   font-weight: 900; /* 追記したコード */
   display: inline-block;
-  color: black;
+  color: #2D2D32;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1086,7 +1087,7 @@ video {
   font-family: "Font Awesome 6 Brands";
   font-weight: 900; /* 追記したコード */
   display: inline-block;
-  color: white;
+  color: #FFFFFF;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1114,7 +1115,7 @@ video {
   font-family: "Font Awesome 6 Brands";
   font-weight: 900;
   display: inline-block;
-  color: white;
+  color: #FFFFFF;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1224,9 +1225,8 @@ video {
   }
 }
 
-/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
 .p-hamburgerbtn__openbtn {
-  position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+  position: relative;
   cursor: pointer;
   width: 21px;
   height: 32px;
@@ -1238,11 +1238,11 @@ video {
 }
 .p-hamburgerbtn__openbtn span {
   display: inline-block;
-  transition: all 0.4s; /*アニメーションの設定*/
+  transition: all 0.4s;
   position: absolute;
   height: 3px;
   border-radius: 5px;
-  background: blue;
+  background: #64629D;
   width: 21px;
 }
 .p-hamburgerbtn__openbtn span:nth-of-type(1) {
@@ -1254,7 +1254,7 @@ video {
   top: -15px;
   left: -2px;
   display: block;
-  color: blue;
+  background: #64629D;
   font-size: 6px;
   text-transform: uppercase;
   text-align: center;

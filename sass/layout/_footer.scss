@@ -3,7 +3,7 @@
 
 .l-footer {
     height: 140px;
-    background-color: var.$background-color-footer;
+    background-color: var.$background-footer;
     color: var.$white;
 
     @include mixin.mq('tab') {
