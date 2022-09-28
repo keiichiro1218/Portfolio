@@ -6,11 +6,6 @@
     display: flex;
     align-items: center;
 
-    @include mixin.mq('sp') {
-		display: none;
-
-	}
-
     @include mixin.mq('tab') {
         display: none;
     }
@@ -21,9 +16,6 @@
     margin-left: 0;
     z-index: 10;
    
-   
-   
-
     .p-headermenu__list {
         display: block;
         background-color: var.$main-visual;
@@ -31,24 +23,19 @@
         top: 52px;
         left: 0;
         width: 100%;
-        // position: fixed;
         height: 100vh;
         padding: 0 10%;
-        // margin: 0 5%;
 
         @include mixin.mq('tab') {
             padding-top: 82px;
     
         }
         
-        
-
         li {
             font-size: 24px;
             margin-left: 18%;
             position: relative;
             
-
             &::before {
                 content: "";
                 width: 20px;
@@ -63,9 +50,7 @@
                 margin: auto;
             }
         }
-
     }
-    
 }
 
 .p-headermenu__list {
@@ -96,88 +81,162 @@
 }
 
 
+// /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+// .openbtn4{
+//     position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+//     cursor: pointer;
+//       width: 21px;
+//       height:32px;
+
+//       @include mixin.mq('pc') {
+// 		display: none;
+
+// 	}
+//   }
+  
+//   /*ボタン内側*/
+//   .openbtn4 span{
+//       display: inline-block;
+//       transition: all .4s;/*アニメーションの設定*/
+//       position: absolute;
+//       height: 3px;
+//       border-radius: 5px;
+//     background: blue;
+//       width: 21px;
+//     }
+  
+//   .openbtn4 span:nth-of-type(1) {
+//     top: 12px;
+//   }
+  
+//   .openbtn4 span:nth-of-type(2) {
+//     top:21px;
+//     width: 13px;
+//     right: 0;
+//     position: absolute;
+    
+//   }
+  
+//   .openbtn4 span:nth-of-type(3) {
+//     top:29px;
+//   }
+  
+//   .openbtn4 span:nth-of-type(1)::before {
+//     content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+//     position: absolute;
+//     top:-15px;
+//     left:-2px;
+//     display: block;
+//     color: blue;
+//     font-size: 6px;
+//     text-transform: uppercase;
+//     text-align: center;
+
+//   }
+
+//   .openbtn4.active span:nth-of-type(1)::before {
+//     display: none;
+//   }
+
+//   .openbtn4.active span:nth-of-type(1) {
+//     top: 8px;
+//     left: 5px;
+//     transform: translateY(6px) rotate(-45deg);
+//     width: 21px;
+// }
+
+// .openbtn4.active span:nth-of-type(2) {
+//   opacity: 0;
+// }
+
+// .openbtn4.active span:nth-of-type(3){
+//     top: 20px;
+//     left: 5px;
+//     transform: translateY(-6px) rotate(45deg);
+//     width: 21px;
+// }
+
+
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-.openbtn4{
+.p-hamburgerbtn__openbtn {
     position: relative;/*ボタン内側の基点となるためrelativeを指定*/
     cursor: pointer;
-      width: 21px;
-      height:32px;
+    width: 21px;
+    height:32px;
 
-      @include mixin.mq('pc') {
-		display: none;
+    @include mixin.mq('pc') {
+    display: none;
 
-	}
-  }
-  
-  /*ボタン内側*/
-  .openbtn4 span{
+    }
+
+    span {
       display: inline-block;
       transition: all .4s;/*アニメーションの設定*/
       position: absolute;
       height: 3px;
       border-radius: 5px;
-    background: blue;
+      background: blue;
+      width: 21px;
+
+      &:nth-of-type(1) {
+        top: 12px;
+
+        &::before {
+          content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+          position: absolute;
+          top:-15px;
+          left:-2px;
+          display: block;
+          color: blue;
+          font-size: 6px;
+          text-transform: uppercase;
+          text-align: center;
+      
+        }
+      }
+      
+      &:nth-of-type(2) {
+        top:21px;
+        width: 13px;
+        right: 0;
+        position: absolute;
+        
+      }
+
+      &:nth-of-type(3) {
+        top:29px;
+      }
+
+    }
+    
+}
+
+.p-hamburgerbtn__openbtn.active {
+
+  span {
+
+    &:nth-of-type(1) {
+      top: 8px;
+      left: 5px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 21px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &:nth-of-type(3){
+      top: 20px;
+      left: 5px;
+      transform: translateY(-6px) rotate(45deg);
       width: 21px;
     }
-  
-  .openbtn4 span:nth-of-type(1) {
-    top: 12px;
-  }
-  
-  .openbtn4 span:nth-of-type(2) {
-    top:21px;
-    width: 13px;
-    right: 0;
-    position: absolute;
-    
-  }
-  
-  .openbtn4 span:nth-of-type(3) {
-    top:29px;
-  }
-  
-  .openbtn4 span:nth-of-type(1)::before {
-    content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
-    position: absolute;
-    top:-15px;
-    left:-2px;
-    display: block;
-    color: blue;
-    font-size: 6px;
-    text-transform: uppercase;
-    text-align: center;
 
   }
 
-  .openbtn4.active span:nth-of-type(1)::before {
-    display: none;
-  }
-
-  .openbtn4.active span:nth-of-type(1) {
-    top: 8px;
-    left: 5px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 21px;
 }
-
-.openbtn4.active span:nth-of-type(2) {
-  opacity: 0;
-}
-
-.openbtn4.active span:nth-of-type(3){
-    top: 20px;
-    left: 5px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 21px;
-}
-
-// .p-hamburgerbtn {
-//     @include mixin.mq('pc') {
-// 		display: none;
-
-// 	}
-// }
-
-// body.active {
-//     position: fixed;
-// }

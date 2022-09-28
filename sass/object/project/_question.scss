@@ -5,7 +5,7 @@
     padding: 100px 0;
     background-color: var.$background-color-gray;
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
 		padding: 60px 0;
 	}
 }
@@ -13,7 +13,7 @@
 .p-question__inner {
     margin: 0 18%;
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
 		margin: 0 5%;
 	}
 }
@@ -26,7 +26,7 @@
     text-align: center;
     font-weight: 700;
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
         font-size: 30px;
         margin-bottom: 40px;
     }
@@ -39,7 +39,7 @@
         text-align: center;
         display: block;
 
-        @include mixin.mq('tab-split-max') {
+        @include mixin.mq('tab') {
             font-size: 22px;
         }
     
@@ -66,7 +66,7 @@
     color: var.$white ;
     margin-bottom: 14px;
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
         position: relative;
     }
    
@@ -74,7 +74,7 @@
 
 .p-question__question-text {
    
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
         font-size: 16px;
         line-height: 25.6px;
         padding: 10px 10px 8px 47px;
@@ -89,7 +89,7 @@
     line-height: 22px;
     font-family: "Noto Sans JP";
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
         position: absolute;
         top: 10px;
         left: 15px;
@@ -115,7 +115,7 @@
     font-family: Noto Sans JP;
     position: relative;
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
         padding-top: 12px;
         padding-bottom: 12px;
     }
@@ -130,7 +130,7 @@
     font-size: 22px;
     line-height: 22px;
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
         top: 12px;
         left: 15px;
     }
@@ -138,7 +138,7 @@
 
 .p-question__answer-text {
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
         font-size: 16px;
     }
 }

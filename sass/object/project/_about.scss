@@ -14,7 +14,6 @@
 }
 
 .p-about__title {
-    
     margin-bottom: 30px;
     font-size: 48px;
     letter-spacing: 5%;
@@ -25,12 +24,12 @@
 
         @include mixin.mq('tab-split-max') {
             display: block;
+            }
         }
-    }
 
-    @include mixin.mq('tab') {
-		font-size: 30px;
-	}
+        @include mixin.mq('tab') {
+            font-size: 30px;
+        }
 
     &::before {
         content: "What is Ravek?";

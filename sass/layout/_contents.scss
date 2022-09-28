@@ -5,11 +5,6 @@
     position: relative;
     top: 52px;
 
-    @include mixin.mq('tab') {
-		top: 52px;
-
-	}
-
     @include mixin.mq('pc') {
 		top: 0;
 

@@ -52,14 +52,6 @@
     display: flex;    
     bottom: 0px;
 
-    // @include mixin.mq('tab-split-max') {
-    //     position: absolute;
-    //     display: block;
-    //     text-align: center;
-    //     bottom: -100px;
-        
-	// }
-
     @include mixin.mq('tab') {
         position: absolute;
         display: block;

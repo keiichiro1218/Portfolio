@@ -1,15 +1,15 @@
 @use "./global/variables" as var;
 @use "./global/mixin" as mixin;
 
-.u-button-margin {
-    margin-left: 14px;
+// .u-button-margin {
+//     margin-left: 14px;
 
-    @include mixin.mq('sp') {
-		display: none;
-	}
+//     @include mixin.mq('sp') {
+// 		display: none;
+// 	}
 
-    @include mixin.mq('tab-split-max') {
-        display: none;
-    }
-}
+//     @include mixin.mq('tab-split-max') {
+//         display: none;
+//     }
+// }
 

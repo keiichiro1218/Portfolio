@@ -333,11 +333,6 @@ video {
   position: relative;
   top: 52px;
 }
-@media screen and (max-width: 960px) {
-  .l-contents {
-    top: 52px;
-  }
-}
 @media screen and (min-width: 961px) {
   .l-contents {
     top: 0;
@@ -354,7 +349,7 @@ video {
   background-color: #000000;
   color: #FFFFFF;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .l-footer {
     height: 360px;
     padding: 40px 0;
@@ -998,7 +993,7 @@ video {
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-footer-contents {
     flex-direction: column-reverse;
     text-align: center;
@@ -1015,7 +1010,7 @@ video {
   margin-bottom: 19px;
   line-height: 24px;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-footer-contents__logo {
     margin-bottom: 18px;
   }
@@ -1029,7 +1024,7 @@ video {
   line-height: 14px;
   margin-bottom: 19px;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-footer-contents__list {
     display: block;
     margin-bottom: 28px;
@@ -1045,7 +1040,7 @@ video {
 .p-footer-contents__copyright {
   display: flex;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-footer-contents__copyright {
     display: block;
   }
@@ -1162,11 +1157,6 @@ video {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 390px) {
-  .p-headermenu {
-    display: none;
-  }
-}
 @media screen and (max-width: 960px) {
   .p-headermenu {
     display: none;
@@ -1235,20 +1225,18 @@ video {
 }
 
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-.openbtn4 {
+.p-hamburgerbtn__openbtn {
   position: relative; /*ボタン内側の基点となるためrelativeを指定*/
   cursor: pointer;
   width: 21px;
   height: 32px;
 }
 @media screen and (min-width: 961px) {
-  .openbtn4 {
+  .p-hamburgerbtn__openbtn {
     display: none;
   }
 }
-
-/*ボタン内側*/
-.openbtn4 span {
+.p-hamburgerbtn__openbtn span {
   display: inline-block;
   transition: all 0.4s; /*アニメーションの設定*/
   position: absolute;
@@ -1257,23 +1245,10 @@ video {
   background: blue;
   width: 21px;
 }
-
-.openbtn4 span:nth-of-type(1) {
+.p-hamburgerbtn__openbtn span:nth-of-type(1) {
   top: 12px;
 }
-
-.openbtn4 span:nth-of-type(2) {
-  top: 21px;
-  width: 13px;
-  right: 0;
-  position: absolute;
-}
-
-.openbtn4 span:nth-of-type(3) {
-  top: 29px;
-}
-
-.openbtn4 span:nth-of-type(1)::before {
+.p-hamburgerbtn__openbtn span:nth-of-type(1)::before {
   content: "Menu"; /*3つ目の要素のafterにMenu表示を指定*/
   position: absolute;
   top: -15px;
@@ -1284,23 +1259,29 @@ video {
   text-transform: uppercase;
   text-align: center;
 }
-
-.openbtn4.active span:nth-of-type(1)::before {
-  display: none;
+.p-hamburgerbtn__openbtn span:nth-of-type(2) {
+  top: 21px;
+  width: 13px;
+  right: 0;
+  position: absolute;
+}
+.p-hamburgerbtn__openbtn span:nth-of-type(3) {
+  top: 29px;
 }
 
-.openbtn4.active span:nth-of-type(1) {
+.p-hamburgerbtn__openbtn.active span:nth-of-type(1) {
   top: 8px;
   left: 5px;
   transform: translateY(6px) rotate(-45deg);
   width: 21px;
 }
-
-.openbtn4.active span:nth-of-type(2) {
+.p-hamburgerbtn__openbtn.active span:nth-of-type(1)::before {
+  display: none;
+}
+.p-hamburgerbtn__openbtn.active span:nth-of-type(2) {
   opacity: 0;
 }
-
-.openbtn4.active span:nth-of-type(3) {
+.p-hamburgerbtn__openbtn.active span:nth-of-type(3) {
   top: 20px;
   left: 5px;
   transform: translateY(-6px) rotate(45deg);
@@ -1409,7 +1390,7 @@ video {
 .p-price {
   padding: 100px 0;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-price {
     padding: 60px 0;
   }
@@ -1422,7 +1403,7 @@ video {
   text-align: center;
   font-weight: 700;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-price__title {
     font-size: 30px;
   }
@@ -1435,7 +1416,7 @@ video {
   text-align: center;
   display: block;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-price__title::before {
     font-size: 22px;
   }
@@ -1449,7 +1430,7 @@ video {
   padding: 100px 0;
   background-color: #F9F9F9;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question {
     padding: 60px 0;
   }
@@ -1458,7 +1439,7 @@ video {
 .p-question__inner {
   margin: 0 18%;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__inner {
     margin: 0 5%;
   }
@@ -1471,7 +1452,7 @@ video {
   text-align: center;
   font-weight: 700;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__title {
     font-size: 30px;
     margin-bottom: 40px;
@@ -1485,7 +1466,7 @@ video {
   text-align: center;
   display: block;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__title::before {
     font-size: 22px;
   }
@@ -1507,13 +1488,13 @@ video {
   color: #FFFFFF;
   margin-bottom: 14px;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__query {
     position: relative;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__question-text {
     font-size: 16px;
     line-height: 25.6px;
@@ -1528,7 +1509,7 @@ video {
   line-height: 22px;
   font-family: "Noto Sans JP";
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__q {
     position: absolute;
     top: 10px;
@@ -1550,7 +1531,7 @@ video {
   font-family: Noto Sans JP;
   position: relative;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__answer {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -1565,14 +1546,14 @@ video {
   font-size: 22px;
   line-height: 22px;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__a {
     top: 12px;
     left: 15px;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-question__answer-text {
     font-size: 16px;
   }
@@ -1583,7 +1564,7 @@ video {
   text-align: center;
   padding: 60px 0;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-recommend {
     padding: 40px 0;
   }
@@ -1595,7 +1576,7 @@ video {
   font-size: 36px;
   font-weight: 700;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 960px) {
   .p-recommend__text {
     font-size: 18px;
     margin-bottom: 24px;
@@ -1874,18 +1855,4 @@ video {
 }
 .p-users__img:nth-child(n+5) {
   margin-top: 50px;
-}
-
-.u-button-margin {
-  margin-left: 14px;
-}
-@media screen and (max-width: 390px) {
-  .u-button-margin {
-    display: none;
-  }
-}
-@media screen and (max-width: 520px) {
-  .u-button-margin {
-    display: none;
-  }
 }

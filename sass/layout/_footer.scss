@@ -6,10 +6,9 @@
     background-color: var.$background-color-footer;
     color: var.$white;
 
-    @include mixin.mq('tab-split-max') {
+    @include mixin.mq('tab') {
         height: 360px;
         padding: 40px 0;
-        // padding: 92px 0 40px 0;
+        
     }
-
 }

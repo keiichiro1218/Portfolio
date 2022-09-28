@@ -115,12 +115,6 @@
     margin-left: -7%;
     z-index: 5;
 
-    // @include mixin.mq('tab-split-max') {
-    //     width: 75%;
-    //     width: 100%;
-    //     margin-left: 0;
-    // }
-
     @include mixin.mq('tab') {
 		width: 100%;
         margin-left: 0;
@@ -138,7 +132,6 @@
     padding: 65px 124px 65px 148px;
     background-color: var.$white;
     border-radius: 30px;
-    // height: 366px;
     width: 65%;
     margin-bottom: auto;
     margin-left: -5%;
@@ -203,11 +196,9 @@
     padding: 65px 124px 65px 148px;
     background-color: var.$white;
     border-radius: 30px;
-    // height: 366px;
     width: 65%;
     margin-top: auto;
     position: relative;
-
 
     @include mixin.mq('tab') {
         padding: 0;
@@ -215,7 +206,6 @@
         padding: 100px 20px 40px;
         margin-top: -110px;
     }
-
     
     &:before {
         content: "03";
