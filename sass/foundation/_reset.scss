@@ -7,16 +7,19 @@
 /* # =================================================================
    # Global selectors
    # ================================================================= */
-
-   body.active {
-    position: fixed;
-  }
   
    html {
     box-sizing: border-box;
     overflow-y: scroll; /* All browsers without overlaying scrollbars */
     -webkit-text-size-adjust: 100%; /* iOS 8+ */
-    font-family: 'Noto Sans JP';
+    // font-family: 'Noto Sans JP';
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
   }
   
   *,

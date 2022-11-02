@@ -1,0 +1,16 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-card {
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    border-radius: 50px;
+    
+}
+
+.p-card__contents {
+    display: flex;
+    flex-wrap: wrap;
+
+}

@@ -1,17 +1,25 @@
 {
-  "name": "webservice",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keiichiro1218/portforio.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keiichiro1218/portforio/issues"
+  },
+  "homepage": "https://github.com/keiichiro1218/portforio#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-glob-use-forward": "^0.1.3"
   }
 }

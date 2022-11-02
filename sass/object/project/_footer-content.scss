@@ -1,0 +1,20 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-footer-content {
+    text-align: center;
+    height: inherit;
+    padding: 20px 0;
+}
+
+.p-footer-list__item {
+    background-color: var.$white;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.p-footer-content__menu {
+    color: var.$white;
+}

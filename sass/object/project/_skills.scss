@@ -1,0 +1,67 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-skill {
+    padding: 50px 0;
+    
+}
+
+.p-skill__inner {
+    margin: 0 10%;
+
+    @include mixin.mq('tab') {
+        margin: 0 20%;
+
+    }
+}
+
+.p-skill__icon {
+    margin-bottom: 30px;
+
+    @include mixin.mq('pc-mini') {
+        width: 50%;
+        margin-bottom: 0;
+        margin-right: 30px;
+
+    }
+
+    img {
+        height: 10vh;
+    }
+}
+
+.p-skill__contents {
+    display: block;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 32px;
+    background-color: var.$white;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 3px -3px 6px -2px rgba(0, 0, 0, 0.3);
+
+    @include mixin.mq('pc-mini') {
+        display: flex;
+
+    }
+}
+
+.p-skill__lead {
+    color: var.$gray-dark;
+    font-weight: 800;
+
+    @include mixin.mq('pc-mini') {
+        display: flex;
+
+    }
+}
+
+.p-skill__detail {
+    text-align: start;
+    color: var.$gray-dark;
+}
+
+.p-skill__explanation {
+    text-align: start;
+    letter-spacing: 2px;
+    
+}

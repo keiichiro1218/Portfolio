@@ -1,0 +1,27 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.c-btn-form {
+    border-radius: 6px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    display: block;
+    letter-spacing: 0.05em;
+    background: var.$gray-dark;
+    color: var.$white;
+    font-weight: bold;
+    font-size: 16px;
+
+    @include mixin.mq('ipad') {
+      margin-top: 32px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 280px;
+  
+    }
+
+  }

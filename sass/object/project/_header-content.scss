@@ -1,0 +1,64 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-header-content {
+    display: flex;
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+
+    @include mixin.mq('ipad') {
+        justify-content: space-between;
+
+    }
+}
+
+.p-header-content__menu {
+    width: 50%;
+    background-color: var.$gray-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    list-style: none;
+	transform: translate(100%);
+
+    @include mixin.mq('ipad') {
+        transform: translate(0);
+        background-color: transparent;
+        position: static;
+        width: auto;
+        height: auto;
+
+    }
+}
+
+.p-header-content__menu.active {
+    display: block;
+    transform: translate(0); 
+    
+}
+
+.p-header-content__list {
+    margin-top: 50px;
+    list-style: none;
+
+    @include mixin.mq('ipad') {
+        margin-top: 0;
+        display: flex;
+        height: 100%;
+
+    }
+
+        .menu-item {
+    
+            a {
+                color: var.$gray-sidebar-footer;
+                padding: 10px 20px ;
+                display: inline-block;
+                height: 100%;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+}

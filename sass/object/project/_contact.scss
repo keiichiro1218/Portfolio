@@ -1,0 +1,18 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-contact {
+    padding: 5vh 0;
+    background-color: var.$gray-main;
+    height: inherit;
+
+}
+
+.p-contact__inner {
+    margin: 0 10% ;
+
+    @include mixin.mq('pc-mini') {
+        margin: 0 20%;
+
+    }
+}

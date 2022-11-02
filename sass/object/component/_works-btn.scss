@@ -1,0 +1,14 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.c-works-button {
+    margin-top: 50px;
+
+    a {
+        padding: 10px 20px;
+        border-radius: 50px;
+        background-color: var.$gray-sidebar-footer;
+        display: inline-block;
+        color: var.$white;
+    }
+}
