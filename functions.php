@@ -46,3 +46,4 @@ register_post_type( 'works',  // カスタム投稿ID
 add_action( 'init', 'create_post_type' ); // アクションに上記関数をフックする
 
 add_theme_support('post-thumbnails');
+

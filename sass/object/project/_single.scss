@@ -1,0 +1,18 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-single {
+    // padding: 5vh 0;
+    background-color: #e6e6e6;
+    height: inherit;
+
+}
+
+.p-single__inner {
+    margin: 0 5%;
+
+    @include mixin.mq('ipad') {
+        margin: 0 20%;
+
+    }
+}

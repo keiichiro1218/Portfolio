@@ -2,8 +2,8 @@
 @use "./global/mixin" as mixin;
 
 .p-works {
-    padding: 5vh 0;
     background-color: var.$gray-main;
+    padding: 10px 0;
     height: inherit;
 
 }
@@ -16,12 +16,19 @@
 
     }
 
-    @include mixin.mq('pc-wide') {
-        margin: 0 20%;
+    @include mixin.mq('pc-mini') {
+        margin: 0 25%;
 
     }
 }
 
 .p-works__title {
-    padding-bottom: 50px;
+    
+    &::after {
+        content: "制作物";
+        display: block;
+        font-size: 16px;
+    }
 }
+
+

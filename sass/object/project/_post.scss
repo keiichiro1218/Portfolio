@@ -13,7 +13,7 @@
         margin-top: 10px;
     }
 
-    @include mixin.mq('ipad') {
+    @include mixin.mq('tab') {
         width: 30%;
 
         &:nth-child(2n) {
@@ -34,27 +34,20 @@
         }
     }
 
-    @include mixin.mq('pc') {
-       width: 22%;
+    @include mixin.mq('pc-wide') {
+        width: 25%;
 
-       &:not(:nth-child(3n+1)){
-        margin-left: 0;
+        &:not(:nth-child(3n+1)){
+            margin-left: 12%;
         }
 
-        &:not(:nth-child(4n+1)){
-            margin-left: 2%;
-
-        }
-
-        &:nth-child( n + 4) {
-            margin-top: 0px;
-        }
-
-        &:nth-child( n + 5 ) {
-            margin-top: 30px;
-        }
     }
 
+
+}
+
+.p-works__post-name {
+    padding: 10px 10px;
 }
 
 .p-post__thumbnail {

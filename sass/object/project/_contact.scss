@@ -16,3 +16,12 @@
 
     }
 }
+
+.p-contact__title {
+
+    &::after {
+        content: "お問い合わせ";
+        display: block;
+        font-size: 16px;
+    }
+}

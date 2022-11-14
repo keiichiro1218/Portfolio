@@ -1,56 +1,61 @@
 <?php get_header(); ?>
-    <div class="l-main l-main__archive">
-        <section class="p-works">
-            <div class="l-inner">
-                <h2 class="p-section-title">Works</h2>
+<div class="l-main l-main__archive">
+    <section class="p-works">
+        <div class="p-breadcrumb">
+            <?php
+                if ( function_exists( 'bcn_display' ) ) {
+                    bcn_display();
+                }
+            ?>
+        </div>
+        <div class="p-works__inner">
+                <h2 class="c-section-title">
+                    Works
+                </h2>
                 <div class="p-card">
-                    <div class="p-works__contents">
+                    <div class="p-card__contents">
                         <?php
-                        $args = [
-                        'post_type' => 'works', // カスタム投稿名が「gourmet」の場合
-                        'posts_per_page' => 5, // 表示する数
-                        ];
-                        $my_posts = get_posts($args); ?>
-    
-                        <?php if ($my_posts) : foreach ($my_posts as $post) : setup_postdata($post); // 投稿がある場合 ?>
-                            <a href="" class="p-works__contents-item">
-                                <div class="p-works__contents-container">
-                                    <div class="p-works__contents-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images.jpeg" alt="">
-                        
+                        if ( have_posts() ) :
+                        ?>
+                        <?php
+                        while ( have_posts() ) :
+                        the_post();
+                        ?>
+                            <a href="<?php the_permalink() ?>" class="p-post">
+                                <div class="p-post__thumbnail">
+                                    <div class="p-post__img">
+                                    <?php if (has_post_thumbnail()) : /* もしアイキャッチが登録されていたら */ ?>
+                                    <?php the_post_thumbnail(); ?>
+                                    <?php else: /* 登録されていなかったら */ ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-code.png" alt="">
+                                    <?php endif; ?>
+                                        <!-- <?php the_post_thumbnail(); ?> -->
                                     </div>
                                 </div>
-                            </a>
-                        <?php endforeach; ?>
-                        <?php else : // 記事がない場合 ?>
-                            <li>まだ投稿がありません。</li>
-                        <?php endif; wp_reset_postdata(); ?>
-                        <a href="" class="p-works__contents-item">
-                                <div class="p-works__contents-container">
-                                    <div class="p-works__contents-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images.jpeg" alt="">
-        
-                                    </div>
+                                <div class="p-works__post-name">
+                                    <?php the_title() ?>
                                 </div>
                             </a>
-                            <a href="" class="p-works__contents-item">
-                                <div class="p-works__contents-container">
-                                    <div class="p-works__contents-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images.jpeg" alt="">
-        
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="" class="p-works__contents-item">
-                                <div class="p-works__contents-container">
-                                    <div class="p-works__contents-img">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images.jpeg" alt="">
-        
-                                    </div>
-                                </div>
-                            </a>
+                        <?php endwhile;
+                                    else :
+                        ?><p>表示する記事がありません</p>
+                        <?php endif; ?>
                     </div>
                 </div>
-            </div>
-        </section>
-<?php get_footer(); ?>
+                <div class="c-pagenation">
+                    <?php
+                    $link = get_next_posts_link('次へ');
+                    $link = str_replace('<a','<a class="c-pagenation__btn"',$link);
+                    echo $link;
+                    ?>
+                    <?php
+                    $link = get_previous_posts_link('前へ');
+                    $link = str_replace('<a','<a class="c-pagenation__btn"',$link);
+                    echo $link;
+                    ?>
+                </div>
+        </div>
+    </section>
+    <?php get_footer(); ?>
+    
+</div>

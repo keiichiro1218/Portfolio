@@ -9,39 +9,33 @@
             ?>
         </div>
         <div class="p-works__inner">
-                <h2 class="c-section-title p-works__title">
+                <h2 class="c-section-title">
                     Works
                 </h2>
                 <div class="p-card">
                     <div class="p-card__contents">
-                    <?php
-                    $args = array(
-                        'post_type' => 'works',
-                        'posts_per_page' => 6,
-                    );
-                    $the_query = new WP_Query($args);
-                    ?>
-                    <?php if ($the_query->have_posts()): ?>
-                    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <!-- ここに投稿がある場合の記述 -->
+                        <?php
+                            $args = [
+                                'post_type' => 'works', // カスタム投稿名が「gourmet」の場合
+                                'posts_per_page' => 5, // 表示する数
+                            ];
+                            $my_query = new WP_Query($args); ?>
+                        <?php if ($my_query->have_posts()): // 投稿がある場合 ?>
+                        <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                             <a href="<?php the_permalink() ?>" class="p-post">
                                 <div class="p-post__thumbnail">
                                     <div class="p-post__img">
-                                        <?php if (has_post_thumbnail()) : /* もしアイキャッチが登録されていたら */ ?>
                                         <?php the_post_thumbnail(); ?>
-                                        <?php else: /* 登録されていなかったら */ ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/no-image.png" alt="">
-                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <div class="p-works__post-name">
                                     <?php the_title() ?>
                                 </div>
                             </a>
-                    <?php endwhile; ?>
-                    <?php else: ?>
-                    <!-- ここに投稿がない場合の記述 -->
-                    <?php endif; wp_reset_postdata(); ?>
+                        <?php endwhile; ?>
+                        <?php else: // 投稿がない場合?>
+                        <p>まだ投稿がありません。</p>
+                        <?php endif; wp_reset_postdata(); ?>
                     </div>
                     <?php
                     $count_posts = wp_count_posts('works');
@@ -57,7 +51,7 @@
         </section>
         <section class="p-skill">
             <div class="p-skill__inner">
-                <h2 class="c-section-title p-skill__title">
+                <h2 class="c-section-title">
                     Skills
                 </h2>
                 <div class="p-skill__contents">
@@ -77,7 +71,7 @@
         <section class="p-contact">
             <div class="p-contact__inner">
                 <div class="p-section-title">
-                    <h2 class="c-section-title p-contact__title">Contact</h2>
+                    <h2 class="c-section-title">Contact</h2>
                 </div>
                 <?PHP get_template_part('content-contact'); ?>
             </div>
