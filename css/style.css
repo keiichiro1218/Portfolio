@@ -389,6 +389,13 @@ body.active {
   }
 }
 
+.c-breadcrumb::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f015";
+  margin-right: 10px;
+}
+
 .c-openbtn {
   position: relative;
   cursor: pointer;
@@ -621,7 +628,7 @@ body.active {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-@media screen and (min-width: 391px) {
+@media screen and (min-width: 415px) {
   .p-form__item-label-required {
     width: 48px;
     font-size: 10px;
@@ -688,6 +695,88 @@ body.active {
   text-decoration: none;
 }
 
+.p-main-visual {
+  padding: 50px 0;
+}
+
+.p-main-visual__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 415px) {
+  .p-main-visual__inner {
+    width: 80%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .p-main-visual__inner {
+    width: 70%;
+  }
+}
+
+.p-main-visual__content {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .p-main-visual__content {
+    display: flex;
+  }
+}
+.p-main-visual__content img {
+  width: 100%;
+}
+@media screen and (min-width: 415px) {
+  .p-main-visual__content img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-main-visual__content img {
+    width: 50%;
+  }
+}
+
+.p-main-visual__text-wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .p-main-visual__text-wrap {
+    width: 50%;
+    position: relative;
+  }
+}
+
+.p-main-visual__text {
+  font-size: 20px;
+  text-align: start;
+}
+@media screen and (min-width: 415px) {
+  .p-main-visual__text {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-main-visual__text {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p-main-visual__text {
+    font-size: 32px;
+  }
+}
+
+.p-main-visual__text-top {
+  margin-bottom: 16px;
+}
+
 .p-post {
   display: inline-block;
   width: 47.619047619%;
@@ -698,7 +787,7 @@ body.active {
 .p-post:nth-child(n+3) {
   margin-top: 10px;
 }
-@media screen and (min-width: 391px) {
+@media screen and (min-width: 415px) {
   .p-post {
     width: 30%;
   }
@@ -738,7 +827,8 @@ body.active {
 }
 .p-post__img img {
   width: 100%;
-  height: auto;
+  height: 150px;
+  object-fit: contain;
 }
 
 .p-profile {
@@ -767,11 +857,6 @@ body.active {
 .p-skill__inner {
   margin: 0 10%;
 }
-@media screen and (min-width: 391px) {
-  .p-skill__inner {
-    margin: 0 20%;
-  }
-}
 
 .p-skill__title::after {
   content: "できること";
@@ -779,32 +864,36 @@ body.active {
   font-size: 16px;
 }
 
+.p-skill__img {
+  width: 100%;
+}
+@media screen and (min-width: 415px) {
+  .p-skill__img {
+    width: 40%;
+  }
+}
+
 .p-skill__icon {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1000px) {
   .p-skill__icon {
-    width: 50%;
     margin-bottom: 0;
     margin-right: 30px;
   }
 }
 .p-skill__icon img {
-  height: 10vh;
+  width: 100%;
 }
 
 .p-skill__contents {
   display: block;
   margin-bottom: 50px;
   text-align: center;
-  border-radius: 10px;
-  padding: 32px;
-  border: solid 2px black;
 }
 @media screen and (min-width: 1000px) {
   .p-skill__contents {
     display: flex;
-    padding: 50px;
   }
 }
 
@@ -852,4 +941,14 @@ body.active {
   content: "制作物";
   display: block;
   font-size: 16px;
+}
+
+.u-font-weight {
+  font-weight: 700;
+  font-size: 28px;
+}
+@media screen and (min-width: 1200px) {
+  .u-font-weight {
+    font-size: 48px;
+  }
 }

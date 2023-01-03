@@ -1,17 +1,12 @@
 @use "./global/variables" as var;
 @use "./global/mixin" as mixin;
 
-.p-breadcrumb {
-    padding: 10px;
-    margin: 0 5%;
-}
+.c-breadcrumb {
 
-.p-breadcrumb__home {
-    
     &::before {
-        content: '\f015';
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-    }
+        content: "\f015";
+        margin-right: 10px;
+    } 
 }
-

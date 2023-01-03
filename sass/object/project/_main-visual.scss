@@ -1,0 +1,104 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.p-main-visual {
+    padding: 50px 0;
+
+}
+
+
+.p-main-visual__inner {
+    width: 90%;
+    margin: 0 auto;
+
+    @include mixin.mq('tab') {
+        width: 80%;
+        text-align: center;
+ 
+    }
+
+    @include mixin.mq('pc-mini') {
+        width: 70%;
+ 
+     }
+
+}
+
+
+.p-main-visual__content {
+    display: block;
+
+    @include mixin.mq('ipad') {
+       display: flex;
+       
+    }
+    
+    img {
+        width: 100%;
+
+
+        @include mixin.mq('tab') {
+            width: 70%;
+            
+        }
+
+        @include mixin.mq('ipad') {
+            width: 50%;
+     
+         }
+    }
+}
+
+.p-main-visual__text-wrap {
+    width: 80%;
+    margin: 0 auto;
+
+    @include mixin.mq('ipad') {
+        width: 50%;
+        position: relative;
+        
+    }
+}
+
+.p-main-visual__text {
+    font-size: 20px;
+    text-align: start;
+
+
+    @include mixin.mq('tab') {
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+    
+    @include mixin.mq('ipad') {
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);   
+ 
+    }
+
+    @include mixin.mq('pc') {
+        font-size: 32px;
+        
+ 
+    }
+
+}
+
+.p-main-visual__text-top {
+    margin-bottom: 16px;
+    // font-size: 20px;
+}
+
+.p-main-visual__text-under {
+    // font-size: 20px;
+
+}
+
+.p-main-visual__text-bottom {
+    // font-size: 20px;
+
+}

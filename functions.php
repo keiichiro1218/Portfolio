@@ -47,3 +47,24 @@ add_action( 'init', 'create_post_type' ); // アクションに上記関数を�
 
 add_theme_support('post-thumbnails');
 
+
+
+// function my_static_breadcrumb_adder( $breadcrumb_trail ) {
+
+//   if (is_post_type_archive('works')) { // デフォルトの投稿一覧ページの場合
+
+//     $item = new bcn_breadcrumb('Works', null, array('post'));
+
+//   } 
+  // elseif (get_post_type() === 'works') { // デフォルトの投稿ページの場合
+
+  //   $item = new bcn_breadcrumb('Works', null, array('post'), home_url('works/'), null, true);
+
+  // }
+
+//   $stuck = array_pop( $breadcrumb_trail->breadcrumbs ); // HOME 一時退避
+//   $breadcrumb_trail->breadcrumbs[] = $item; // 制作実績 追加
+//   $breadcrumb_trail->breadcrumbs[] = $stuck; // HOME 戻す
+
+// }
+// add_action('bcn_after_fill', 'my_static_breadcrumb_adder');

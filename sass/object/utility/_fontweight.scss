@@ -1,0 +1,13 @@
+@use "./global/variables" as var;
+@use "./global/mixin" as mixin;
+
+.u-font-weight {
+    font-weight: 700;
+    font-size: 28px;
+
+
+    @include mixin.mq('pc') {
+        font-size: 48px;
+ 
+    }
+}

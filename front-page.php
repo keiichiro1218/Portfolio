@@ -1,13 +1,26 @@
 <?php get_header(); ?>
 <div class="l-main">
-    <section class="p-works">
-        <div class="p-breadcrumb">
-            <?php
-                if ( function_exists( 'bcn_display' ) ) {
-                    bcn_display();
-                }
-            ?>
+    <section class="p-main-visual">
+        <div class="p-main-visual__inner">
+            <div class="p-main-visual__content">
+                <div class="p-main-visual__text-wrap">
+                    <div class="p-main-visual__text">
+                        <p class="p-main-visual__text-top">
+                            ご覧いただき<br>ありがとうございます。
+                        </p>
+                        <p class="p-main-visual__text-under"><span class="u-font-weight">コーディング</span>承ります。</p>
+                        <p class="p-main-visual__text-bottom">気軽にお問い合わせください！</p>
+                    </div>
+                    <!-- /.p-main-visual__text -->
+                </div>
+                <!-- /.p-main-visual__text-wrap -->
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/typing.svg" alt="">
+            </div>
+            <!-- /.p-main-visual__content -->
         </div>
+        <!-- /.p-main-visual__inner -->
+    </section>
+    <section class="p-works">
         <div class="p-works__inner">
                 <h2 class="c-section-title p-works__title">
                     Works
@@ -61,10 +74,14 @@
                     Skills
                 </h2>
                 <div class="p-skill__contents">
-                    <div class="p-skill__icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-code.png" alt="">
-                        <p class="p-skill__lead">コーディング</p>
+                    <div class="p-skill__img">
+                        <div class="p-skill__icon">
+                            <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/icon-code.png" alt="">
+                            <p class="p-skill__lead">コーディング</p> -->
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/skill-img.svg" alt="">
+                        </div>
                     </div>
+                    <!-- /.p-skill__img -->
                     <div class="p-skill__explanation">
                         <p>　HTMLとCSSを用いてデザインを忠実に再現致します。HTMLはSEOを意識し、CSSではSASSやFLOCCSのCSS設計を
                             採用し保守性や効率性を意識したコーディングを行います。<br>　またJqueryを使用し基本的な動きをWEBサイトに実装することができます。

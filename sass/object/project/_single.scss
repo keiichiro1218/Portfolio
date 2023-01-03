@@ -2,8 +2,7 @@
 @use "./global/mixin" as mixin;
 
 .p-single {
-    // padding: 5vh 0;
-    background-color: #e6e6e6;
+    background-color: var.$gray-main;
     height: inherit;
 
 }

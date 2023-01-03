@@ -3,17 +3,17 @@
 
 .p-skill {
     padding: 50px 0;
-    background-color: #f8f4e6;
+    background-color: var.$ivory;
     
 }
 
 .p-skill__inner {
     margin: 0 10%;
 
-    @include mixin.mq('tab') {
-        margin: 0 20%;
+    // @include mixin.mq('tab') {
+    //     margin: 0 20%;
 
-    }
+    // }
 }
 
 .p-skill__title {
@@ -25,18 +25,28 @@
     }
 }
 
+.p-skill__img {
+    width: 100%;
+
+    @include mixin.mq('tab') {
+        width: 40%;
+ 
+     }
+}
+
 .p-skill__icon {
     margin-bottom: 30px;
 
     @include mixin.mq('pc-mini') {
-        width: 50%;
+    
         margin-bottom: 0;
         margin-right: 30px;
 
     }
 
     img {
-        height: 10vh;
+        width: 100%;
+        
     }
 }
 
@@ -44,13 +54,13 @@
     display: block;
     margin-bottom: 50px;
     text-align: center;
-    border-radius: 10px;
-    padding: 32px;
-    border: solid 2px black;
+    // border-radius: 10px;
+    // padding: 32px;
+    // border: solid 2px var.$black;
 
     @include mixin.mq('pc-mini') {
         display: flex;
-        padding: 50px;
+        // padding: 50px;
 
     }
 }
